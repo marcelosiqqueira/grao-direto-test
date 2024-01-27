@@ -1,0 +1,13 @@
+<h2>Restaurantes</h2>
+
+<section>
+  <div *ngIf="restaurants.length == 0" class="alert alert-warning" role="alert">
+    Nenhum restaurante disponível.
+  </div>
+
+  <ul class="list-group" *ngIf="restaurants.length > 0">
+    <li class="list-group-item" *ngFor="let restaurant of restaurants">
+      <app-restaurant-list-item [restaurant]="restaurant" class="restaurant-item"></app-restaurant-list-item>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,77 @@
+/* Defina um estilo para o container principal (main) */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Isso faz com que o container principal ocupe pelo menos 100% da altura da viewport */
+}
+
+.options-btn {
+  margin-left: 20px;
+  border: none;
+}
+.options-btn img{
+
+  width: 40px;
+  height: 50px;
+}
+
+
+.address {
+  display: flex;
+  align-self: self;
+}
+
+.header {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: sticky;
+  top: 0; /* Fixa o cabeçalho no topo da viewport */
+  z-index: 100; /* Garante que o cabeçalho esteja acima de outros elementos */
+
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  align-items: center;
+}
+
+/* Estilo para o container de restaurantes */
+.restaurants-container {
+  flex: 1; /* Faz com que este conteúdo ocupe o espaço restante */
+  padding: 20px;
+}
+
+.restaurant-search{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-search input {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+/* Estilo para o rodapé (footer) fixo na parte inferior */
+.action-buttons {
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: sticky;
+  bottom: 0; /* Fixa o rodapé na parte inferior da viewport */
+  z-index: 100; /* Garante que o rodapé esteja acima de outros elementos */
+}
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+.action-buttons button{
+  border: none;
+}
+
+.action-buttons button img {
+  width: 50px;
+  height: 50px;
+}
