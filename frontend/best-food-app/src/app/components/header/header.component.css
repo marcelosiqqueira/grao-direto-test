@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.image-logo {
+  display: flex;
+  justify-content: center;
+}
+.image-logo img {
+  height: 80px;
+  width: 80px;
+}
+
+.options-btn {
+  margin-left: 20px;
+  border: none;
+}
+.options-btn img{
+
+  width: 40px;
+  height: 50px;
+}
+
+.address {
+  display: flex;
+  align-self: self;
+}
