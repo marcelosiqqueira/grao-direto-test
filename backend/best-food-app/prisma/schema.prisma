@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model MenuItem {
+  id           Int         @id @default(autoincrement())
+  restaurantId Int?
+  name         String      @db.VarChar(255)
+  image        String?     @db.VarChar(255)
+  description  String?     @db.Text
+  price        Decimal?    @db.Decimal(10, 2)
+  restaurants  Restaurant? @relation(fields: [restaurantId], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "menu_items_ibfk_1")
+
+  @@index([restaurantId], map: "restaurantId")
+  @@map("menu_items")
+}
+
+model Restaurant {
+  id           Int        @id @default(autoincrement())
+  name         String     @db.VarChar(255)
+  logoImage    String?    @db.VarChar(255)
+  bannerImage  String?    @db.VarChar(255)
+  rating       Decimal?   @db.Decimal(2, 1)
+  deliveryTime String?    @db.VarChar(50)
+  deliveryFee  Decimal?   @db.Decimal(10, 2)
+  distance     String?    @db.VarChar(50)
+  menu_items   MenuItem[]
+
+  @@map("restaurants")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(100)
+  email      String   @unique(map: "email") @db.VarChar(150)
+  password   String   @db.VarChar(100)
+  created_at DateTime @default(now()) @db.Timestamp(0)
+  updated_at DateTime @default(now()) @db.Timestamp(0)
+
+  @@map("users")
+}
