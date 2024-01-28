@@ -1,0 +1,96 @@
+.restaurant-section {
+  width: 70%;
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.banner {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.restaurant-details {
+  margin-top: -80px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  align-self: flex-start;
+}
+
+.title-rating {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.list-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.list-group-item{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+}
+
+.list-group-item img {
+  width: 256px;
+  height: 256px;
+  object-fit: contain;
+}
+
+.item-menu-description{
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .restaurant-section {
+    width: 100%;
+  }
+
+  .list-group{
+    display: flex;
+    flex-direction: column;
+  }
+  .list-group-item img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+  }
+}

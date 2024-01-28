@@ -11,6 +11,9 @@ import { RestaurantListComponent } from './components/restaurants/restaurant-lis
 import { RestaurantListItemComponent } from './components/restaurants/restaurant-list-item/restaurant-list-item.component';
 import { MenuListComponent } from './components/menus/menu-list/menu-list.component';
 import { MenuListItemComponent } from './components/menus/menu-list-item/menu-list-item.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { MenuListItemComponent } from './components/menus/menu-list-item/menu-li
     RestaurantListItemComponent,
     MenuListComponent,
     MenuListItemComponent,
+    HeaderComponent,
+    FooterComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

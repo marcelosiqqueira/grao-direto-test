@@ -1,16 +1,14 @@
 .restaurant-card {
   display: flex;
-  height: 200px;
-  width: 100vw;
+  height: 100px;
   border-radius: 20px;
-  padding: 15px;
   margin-bottom: 20px;
   border-radius: 5px;
   cursor: pointer;
-  /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
 }
 
 .image-container img{
+  height: 100px !important;
   border-radius: 40px !important;
 }
 
@@ -27,6 +25,7 @@
   display: flex; /* Usando flexbox para alinhamento */
   align-items: center; /* Alinhamento vertical dos itens */
   justify-content: start;
+  gap: 5px;
 }
 
 
@@ -34,12 +33,10 @@
 .small-star {
   width: 20px !important; /* ou o tamanho que desejar */
   height: 20px !important; /* ou o tamanho que desejar */
-  margin-right: 5px; /* Espaço entre a estrela e o texto */
 }
 
 .rating p {
   margin: 0; /* Remove margem padrão do parágrafo */
-
 }
 
 .restaurant-card h3 {
@@ -47,8 +44,8 @@
 }
 
 .restaurant-card img {
-  width: 250px;
-  height: 200px;
+  width: 150px;
+  height: 100px;
   border-radius: 4px;
   margin-bottom: 10px;
 }
@@ -71,4 +68,21 @@
 .menu-items .price {
   font-weight: bold;
   color: green;
+}
+
+@media screen and (max-width: 768px) {
+  .restaurant-card {
+    margin-bottom: 100px;
+  }
+
+  .restaurant-description {
+    margin-left: 10px;
+  }
+
+  .restaurant-description h4{
+    font-size: small;
+  }
+  .group-icon p {
+    font-size: small;
+  }
 }

@@ -1,1 +1,35 @@
-<p>menu-list-item works!</p>
+<section class="restaurant-section">
+  <div *ngIf="menuItems.length == 0" class="alert alert-warning" role="alert">
+    Nenhum prato disponível.
+  </div>
+
+  <div class="restaurant-info">
+    <div>
+      <img class="banner" [src]="restaurantInfo.bannerImage" alt="Imagem do restaurante">
+    </div>
+
+    <div class="restaurant-details">
+      <img class="logo" [src]="restaurantInfo.logoImage" alt="Logo do restaurante">
+      <div class="title-rating">
+        <h3>{{ restaurantInfo.name }}</h3>
+        <div class="rating-container">
+          <img class="star-icon" src="../../../../assets/images/icons/star.svg" alt="Classificação por estrelas">
+          <span class="rating">{{ restaurantInfo.rating }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-group" *ngIf="menuItems.length > 0">
+    <li class="list-group-item" *ngFor="let menuItem of menuItems">
+      <div class="item-menu-description">
+        <div class="menu-details">
+          <h4>{{menuItem.name}}</h4>
+          <p>{{menuItem.description}}</p>
+        </div>
+        <span>A partir de R${{menuItem.price}}</span>
+      </div>
+      <img [src]="menuItem.image" alt="">
+    </li>
+  </ul>
+</section>

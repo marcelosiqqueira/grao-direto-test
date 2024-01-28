@@ -14,7 +14,6 @@ export class MenuListComponent {
 
   constructor(private route: ActivatedRoute, private restaurantService: RestaurantService) {
     const restaurantId = this.route.snapshot.params['id'];
-    const menu = this.restaurantService.getMenuByRestaurantId(restaurantId);
-    this.menuItems = menu;
+    this.menuItems = this.restaurantService.getMenuByRestaurantId(restaurantId);
   }
 }

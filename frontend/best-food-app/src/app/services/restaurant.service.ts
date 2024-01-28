@@ -90,6 +90,258 @@ export class RestaurantService {
         },
       ]
     },
+    {
+      id: 3,
+      name: 'Pamonha do Milho',
+      logoImage: 'assets/uploads/restaurants/2/logo.png',
+      bannerImage: 'assets/uploads/restaurants/2/banner.png',
+      rating: 4.5,
+      deliveryTime: '40-55 min',
+      deliveryFee: 7.90,
+      distance: '4.1 km',
+      menuItems: [
+        {
+          id: 1,
+          restaurantId: 1,
+          name: 'PROMOÇÃO LEVE 6 PAGUE 5!',
+          image: 'assets/uploads/restaurants/2/menu/1.png',
+          description: 'PROMOÇÃO LEVE 6 PAGUE 5! A melhor pamonha da região!',
+          price: 79.90
+        },
+        {
+          id: 2,
+          restaurantId: 2,
+          name: 'PAMONHA DOCE COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/2.png',
+          description: 'Pamonha doce recheada com queijo.',
+          price: 8.90
+        },{
+          id: 3,
+          restaurantId: 2,
+          name: 'PAMONHA SAL COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/3.png',
+          description: 'Pamonha salgada com queijo.',
+          price: 7.90
+        },{
+          id: 4,
+          restaurantId: 2,
+          name: 'MINGAU DE MILHO VERDE',
+          image: 'assets/uploads/restaurants/2/menu/4.png',
+          description: 'MINGAU DE MILHO VERDE (250 ML)',
+          price: 17.90
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Pamonha do Milho',
+      logoImage: 'assets/uploads/restaurants/2/logo.png',
+      bannerImage: 'assets/uploads/restaurants/2/banner.png',
+      rating: 4.5,
+      deliveryTime: '40-55 min',
+      deliveryFee: 7.90,
+      distance: '4.1 km',
+      menuItems: [
+        {
+          id: 1,
+          restaurantId: 1,
+          name: 'PROMOÇÃO LEVE 6 PAGUE 5!',
+          image: 'assets/uploads/restaurants/2/menu/1.png',
+          description: 'PROMOÇÃO LEVE 6 PAGUE 5! A melhor pamonha da região!',
+          price: 79.90
+        },
+        {
+          id: 2,
+          restaurantId: 2,
+          name: 'PAMONHA DOCE COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/2.png',
+          description: 'Pamonha doce recheada com queijo.',
+          price: 8.90
+        },{
+          id: 3,
+          restaurantId: 2,
+          name: 'PAMONHA SAL COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/3.png',
+          description: 'Pamonha salgada com queijo.',
+          price: 7.90
+        },{
+          id: 4,
+          restaurantId: 2,
+          name: 'MINGAU DE MILHO VERDE',
+          image: 'assets/uploads/restaurants/2/menu/4.png',
+          description: 'MINGAU DE MILHO VERDE (250 ML)',
+          price: 17.90
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Pamonha do Milho',
+      logoImage: 'assets/uploads/restaurants/2/logo.png',
+      bannerImage: 'assets/uploads/restaurants/2/banner.png',
+      rating: 4.5,
+      deliveryTime: '40-55 min',
+      deliveryFee: 7.90,
+      distance: '4.1 km',
+      menuItems: [
+        {
+          id: 1,
+          restaurantId: 1,
+          name: 'PROMOÇÃO LEVE 6 PAGUE 5!',
+          image: 'assets/uploads/restaurants/2/menu/1.png',
+          description: 'PROMOÇÃO LEVE 6 PAGUE 5! A melhor pamonha da região!',
+          price: 79.90
+        },
+        {
+          id: 2,
+          restaurantId: 2,
+          name: 'PAMONHA DOCE COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/2.png',
+          description: 'Pamonha doce recheada com queijo.',
+          price: 8.90
+        },{
+          id: 3,
+          restaurantId: 2,
+          name: 'PAMONHA SAL COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/3.png',
+          description: 'Pamonha salgada com queijo.',
+          price: 7.90
+        },{
+          id: 4,
+          restaurantId: 2,
+          name: 'MINGAU DE MILHO VERDE',
+          image: 'assets/uploads/restaurants/2/menu/4.png',
+          description: 'MINGAU DE MILHO VERDE (250 ML)',
+          price: 17.90
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Pamonha do Milho',
+      logoImage: 'assets/uploads/restaurants/2/logo.png',
+      bannerImage: 'assets/uploads/restaurants/2/banner.png',
+      rating: 4.5,
+      deliveryTime: '40-55 min',
+      deliveryFee: 7.90,
+      distance: '4.1 km',
+      menuItems: [
+        {
+          id: 1,
+          restaurantId: 1,
+          name: 'PROMOÇÃO LEVE 6 PAGUE 5!',
+          image: 'assets/uploads/restaurants/2/menu/1.png',
+          description: 'PROMOÇÃO LEVE 6 PAGUE 5! A melhor pamonha da região!',
+          price: 79.90
+        },
+        {
+          id: 2,
+          restaurantId: 2,
+          name: 'PAMONHA DOCE COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/2.png',
+          description: 'Pamonha doce recheada com queijo.',
+          price: 8.90
+        },{
+          id: 3,
+          restaurantId: 2,
+          name: 'PAMONHA SAL COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/3.png',
+          description: 'Pamonha salgada com queijo.',
+          price: 7.90
+        },{
+          id: 4,
+          restaurantId: 2,
+          name: 'MINGAU DE MILHO VERDE',
+          image: 'assets/uploads/restaurants/2/menu/4.png',
+          description: 'MINGAU DE MILHO VERDE (250 ML)',
+          price: 17.90
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Pamonha do Milho',
+      logoImage: 'assets/uploads/restaurants/2/logo.png',
+      bannerImage: 'assets/uploads/restaurants/2/banner.png',
+      rating: 4.5,
+      deliveryTime: '40-55 min',
+      deliveryFee: 7.90,
+      distance: '4.1 km',
+      menuItems: [
+        {
+          id: 1,
+          restaurantId: 1,
+          name: 'PROMOÇÃO LEVE 6 PAGUE 5!',
+          image: 'assets/uploads/restaurants/2/menu/1.png',
+          description: 'PROMOÇÃO LEVE 6 PAGUE 5! A melhor pamonha da região!',
+          price: 79.90
+        },
+        {
+          id: 2,
+          restaurantId: 2,
+          name: 'PAMONHA DOCE COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/2.png',
+          description: 'Pamonha doce recheada com queijo.',
+          price: 8.90
+        },{
+          id: 3,
+          restaurantId: 2,
+          name: 'PAMONHA SAL COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/3.png',
+          description: 'Pamonha salgada com queijo.',
+          price: 7.90
+        },{
+          id: 4,
+          restaurantId: 2,
+          name: 'MINGAU DE MILHO VERDE',
+          image: 'assets/uploads/restaurants/2/menu/4.png',
+          description: 'MINGAU DE MILHO VERDE (250 ML)',
+          price: 17.90
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Pamonha do Milho',
+      logoImage: 'assets/uploads/restaurants/2/logo.png',
+      bannerImage: 'assets/uploads/restaurants/2/banner.png',
+      rating: 4.5,
+      deliveryTime: '40-55 min',
+      deliveryFee: 7.90,
+      distance: '4.1 km',
+      menuItems: [
+        {
+          id: 1,
+          restaurantId: 1,
+          name: 'PROMOÇÃO LEVE 6 PAGUE 5!',
+          image: 'assets/uploads/restaurants/2/menu/1.png',
+          description: 'PROMOÇÃO LEVE 6 PAGUE 5! A melhor pamonha da região!',
+          price: 79.90
+        },
+        {
+          id: 2,
+          restaurantId: 2,
+          name: 'PAMONHA DOCE COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/2.png',
+          description: 'Pamonha doce recheada com queijo.',
+          price: 8.90
+        },{
+          id: 3,
+          restaurantId: 2,
+          name: 'PAMONHA SAL COM QUEIJO',
+          image: 'assets/uploads/restaurants/2/menu/3.png',
+          description: 'Pamonha salgada com queijo.',
+          price: 7.90
+        },{
+          id: 4,
+          restaurantId: 2,
+          name: 'MINGAU DE MILHO VERDE',
+          image: 'assets/uploads/restaurants/2/menu/4.png',
+          description: 'MINGAU DE MILHO VERDE (250 ML)',
+          price: 17.90
+        },
+      ]
+    },
   ];
 
   getMenuByRestaurantId(id: number | null) {
@@ -98,6 +350,24 @@ export class RestaurantService {
     }
     const restaurant = this.restaurants.find(r => r.id == id);
     return restaurant ? restaurant.menuItems : [];
+  }
+
+  getInfoRestaurantById(id: number | null) {
+    if(!id) {
+      return [];
+    }
+    const restaurant = this.restaurants.find(r => r.id == id);
+    let restaurantInfo = {};
+
+    if(restaurant) {
+      restaurantInfo = {
+        name: restaurant.name,
+        logoImage: restaurant.logoImage,
+        bannerImage: restaurant.bannerImage,
+        rating: restaurant.rating
+      }
+    }
+    return restaurantInfo;
   }
 
   getAll() {

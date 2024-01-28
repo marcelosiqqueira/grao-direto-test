@@ -3,3 +3,15 @@
   flex-direction: row;
   align-items: center;
 }
+ul {
+  list-style-type: none; /* Remove os marcadores */
+  padding: 0; /* Remove o padding padrão, se necessário */
+}
+
+
+@media screen and (max-width: 768px) {
+  .restaurant-item {
+    margin-top: 50px;
+    height: 150px;
+  }
+}

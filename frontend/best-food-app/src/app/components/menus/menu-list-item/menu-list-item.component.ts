@@ -12,12 +12,16 @@ export class MenuListItemComponent implements OnInit{
   @Input()
   menuItems!: MenuItem[];
 
+  @Input()
+  restaurantInfo!: any;
+
   constructor(private route: ActivatedRoute, private restaurantService: RestaurantService) { }
 
   ngOnInit() {
     const restaurantId = this.route.snapshot.paramMap.get('id');
     if (restaurantId) {
       this.menuItems = this.restaurantService.getMenuByRestaurantId(+restaurantId);
+      this.restaurantInfo = this.restaurantService.getInfoRestaurantById(+restaurantId);
     }
   }
 }
