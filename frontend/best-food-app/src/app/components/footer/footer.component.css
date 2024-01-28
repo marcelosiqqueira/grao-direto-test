@@ -1,0 +1,29 @@
+footer {
+  height: 60px;
+  background-color: #f1f1f1;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.action-buttons {
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+}
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.action-buttons button{
+  border: none;
+}
+
+.action-buttons button img {
+  width: 32px;
+  height: 32px;
+}
