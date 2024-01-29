@@ -1,8 +1,6 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, UseGuards } from '@nestjs/common';
 import { RestaurantService } from './restaurant.service';
-import { CreateRestaurantDto } from './dto/create-restaurant.dto';
 import { AuthGuard } from 'src/guards/auth.guard';
-
 
 @Controller('restaurants')
 export class RestaurantController {
@@ -17,5 +15,10 @@ export class RestaurantController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.restaurantService.findOne(+id);
+  }
+
+  @Post('search')
+  async search(@Body('term') term: string) {
+    return await this.restaurantService.search(term);
   }
 }
