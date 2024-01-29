@@ -7,6 +7,12 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true
   }))
+
+  app.enableCors({
+    origin: 'http://localhost:4200',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type, Accept, Authorization',
+  });
   await app.listen(3000);
 }
 bootstrap();

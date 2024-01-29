@@ -1,3 +1,5 @@
+import { MenuService } from 'src/app/services/menu.service';
+
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestaurantService } from 'src/app/services/restaurant.service';
@@ -12,8 +14,11 @@ export class MenuListComponent {
   @Input()
   menuItems!: MenuItem[];
 
-  constructor(private route: ActivatedRoute, private restaurantService: RestaurantService) {
+  constructor(private route: ActivatedRoute, private menuService: MenuService) {
     const restaurantId = this.route.snapshot.params['id'];
-    this.menuItems = this.restaurantService.getMenuByRestaurantId(restaurantId);
+    this.menuService.getMenuByRestaurantId(+restaurantId).subscribe(
+      data => this.menuItems = data,
+      error => console.error('Erro ao carregar itens do menu', error)
+    );
   }
 }

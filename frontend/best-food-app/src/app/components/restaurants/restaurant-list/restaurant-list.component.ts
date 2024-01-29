@@ -7,11 +7,19 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
   templateUrl: './restaurant-list.component.html',
   styleUrls: ['./restaurant-list.component.css']
 })
-export class RestaurantListComponent implements OnInit{
+export class RestaurantListComponent implements OnInit {
   restaurants: Restaurant[] = [];
+
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit() {
-    this.restaurants = this.restaurantService.getAll();
+    this.restaurantService.getAll().subscribe(
+      (data) => {
+        this.restaurants = data;
+      },
+      (error) => {
+        console.error('Erro ao carregar restaurantes', error);
+      }
+    );
   }
 }
