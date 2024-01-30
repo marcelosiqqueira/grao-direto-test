@@ -4,12 +4,23 @@
   align-items: center;
 }
 ul {
+  margin-top: 2rem;
   list-style-type: none; /* Remove os marcadores */
-  padding: 0; /* Remove o padding padrão, se necessário */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 2.25rem;
 }
 
 
 @media screen and (max-width: 768px) {
+
+  ul {
+    margin-top: 1rem;
+    gap: 0rem;
+    grid-template-columns: 1fr;
+  }
+
   .restaurant-item {
     margin-top: 50px;
     height: 150px;
