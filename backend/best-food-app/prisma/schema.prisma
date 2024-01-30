@@ -29,6 +29,8 @@ model Restaurant {
   deliveryTime String?    @db.VarChar(50)
   deliveryFee  Decimal?   @db.Decimal(10, 2)
   distance     String?    @db.VarChar(50)
+  address      String?    @db.VarChar(255)
+  phone        String?    @db.VarChar(20)
   menu_items   MenuItem[]
 
   @@map("restaurants")
