@@ -11,6 +11,15 @@
   height: 10vh;
 }
 
+.header button {
+  border: none;
+}
+.header button img {
+  width: 32px;
+  height: 32px;
+
+}
+
 .image-logo {
   display: flex;
   justify-content: center;

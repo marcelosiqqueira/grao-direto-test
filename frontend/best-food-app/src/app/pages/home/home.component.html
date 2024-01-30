@@ -1,11 +1,11 @@
-<app-header></app-header>
+<app-header (onSearch)="changeView($event)"></app-header>
 
-<div class="main">
-  <div class="restaurants-container">
+<div ngIclass="main">
+  <div *ngIf = "view == 1" class="restaurants-container">
     <app-restaurant-list></app-restaurant-list>
   </div>
-</div>
 
-<app-search></app-search>
+  <app-search [searchResult]="searchResult" *ngIf = "view == 2"> </app-search>
+</div>
 
 <app-footer></app-footer>

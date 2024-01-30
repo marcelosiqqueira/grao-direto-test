@@ -12,8 +12,6 @@ footer {
   position: sticky;
   bottom: 0;
   z-index: 100;
-}
-.action-buttons {
   display: flex;
   justify-content: space-around;
   gap: 40px;

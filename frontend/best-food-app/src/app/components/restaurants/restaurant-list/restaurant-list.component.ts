@@ -1,6 +1,7 @@
 import { Restaurant } from './../../../shared/models/restaurant.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RestaurantService } from 'src/app/services/restaurant.service';
+import { SearchResult } from 'src/app/shared/models/search-result.model';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -11,6 +12,9 @@ export class RestaurantListComponent implements OnInit {
   restaurants: Restaurant[] = [];
 
   constructor(private restaurantService: RestaurantService) {}
+
+  @Input()
+  searchResult: any = { restaurants: [], pesquisa: '' };
 
   ngOnInit() {
     this.restaurantService.getAll().subscribe(

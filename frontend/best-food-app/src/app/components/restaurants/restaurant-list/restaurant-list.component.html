@@ -4,8 +4,14 @@
     Nenhum restaurante disponível.
   </div>
 
-  <ul *ngIf="restaurants.length > 0">
+  <ul *ngIf="restaurants.length > 0 && searchResult.restaurants.length == 0 && searchResult.pesquisa == '' ">
     <li *ngFor="let restaurant of restaurants">
+      <app-restaurant-list-item [restaurant]="restaurant" class="restaurant-item"></app-restaurant-list-item>
+    </li>
+  </ul>
+
+  <ul *ngIf="searchResult.restaurants.length > 0">
+    <li *ngFor="let restaurant of searchResult.restaurants">
       <app-restaurant-list-item [restaurant]="restaurant" class="restaurant-item"></app-restaurant-list-item>
     </li>
   </ul>

@@ -1,0 +1,10 @@
+<div class="menus">
+  <div (click) = "changeSearchTemplate('loja')" class="loja">
+    <h3 [ngClass]=" term == 'loja' ? 'active' : 'disabled'" class="title">Loja</h3>
+  </div>
+  <div (click) = "changeSearchTemplate('item')" class="item">
+    <h3 [ngClass]="term == 'item' ? 'active' : 'disabled'"  class="title">Item</h3>
+  </div>
+</div>
+
+<app-restaurant-list [searchResult] = "searchResult" *ngIf ="term == 'loja'"></app-restaurant-list>

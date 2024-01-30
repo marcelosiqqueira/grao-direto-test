@@ -3,6 +3,12 @@
     <img src="assets/images/best-food-logo.png" alt="">
   </div>
 
+  <div class="search-container">
+    <img src="../../../assets/images/icons/search.svg" alt="">
+    <input type="text" id="pesquisa" [(ngModel)]="pesquisa" (ngModelChange)="verificarPesquisa()">
+  </div>
+
+
   <div class="user-informations">
     <span>Olá Fred! Seja bem vindo!</span>
     <div class="address">

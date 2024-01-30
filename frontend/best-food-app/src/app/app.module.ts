@@ -13,10 +13,10 @@ import { MenuListComponent } from './components/menus/menu-list/menu-list.compon
 import { MenuListItemComponent } from './components/menus/menu-list-item/menu-list-item.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SearchComponent } from './components/search/search.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
