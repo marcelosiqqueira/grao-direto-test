@@ -7,13 +7,18 @@ ul {
   margin-top: 2rem;
   list-style-type: none; /* Remove os marcadores */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   gap: 2.25rem;
 }
 
 
 @media screen and (max-width: 768px) {
+
+  .restaurant-list-container {
+    padding-left: 1rem;
+    margin-top: 35px;
+  }
 
   ul {
     margin-top: 1rem;
@@ -22,7 +27,6 @@ ul {
   }
 
   .restaurant-item {
-    margin-top: 50px;
     height: 150px;
   }
 }

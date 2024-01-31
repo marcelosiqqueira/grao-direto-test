@@ -1,13 +1,13 @@
 footer {
   height: 60px;
-  background-color: #f1f1f1;
+  background-color: #8b090b;
   position: fixed;
   width: 100%;
   bottom: 0;
 }
 
 .action-buttons {
-  background-color: #f0f0f0;
+  background-color: transparent;
   padding: 10px;
   position: sticky;
   bottom: 0;
@@ -19,6 +19,7 @@ footer {
 
 .action-buttons button{
   border: none;
+  background-color: transparent;
 }
 
 .action-buttons button img {

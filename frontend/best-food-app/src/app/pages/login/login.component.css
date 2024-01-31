@@ -60,7 +60,12 @@
   width: 200px;
   height: 40px;
   border-radius: 20px;
-  background-color: red;
+  background: linear-gradient(
+        to bottom,
+        #9b1a1c,
+        #8b090b,
+        #7a0000
+  );
   color: aliceblue;
   font-weight: 600;
   cursor: pointer;

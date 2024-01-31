@@ -1,6 +1,12 @@
 .header {
   display: flex;
-  background-color: #f0f0f0;
+  background: linear-gradient(
+        to bottom,
+        #9b1a1c, /* Slightly lighter shade */
+        #8b090b, /* Your base color */
+        #7a0000  /* Slightly darker shade */
+  );
+  color: white;
   padding: 10px;
   position: sticky;
   top: 0;
@@ -16,6 +22,11 @@
   width: 20rem;
   height: 2rem;
   border-radius: 6px;
+
+  background-color: transparent;
+  border-color: white;
+  border-style: solid;
+  color: white;
 }
 
 .search-container img{
@@ -26,6 +37,7 @@
 .image-logo {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .image-logo img {
   display: flex;
