@@ -5,9 +5,11 @@ export interface Restaurant {
   name: string;
   logoImage: string;
   bannerImage: string;
-  rating: number; // avaliação
-  deliveryTime: string; // tempo de entrega
-  deliveryFee: number; // valor da entrega
-  distance: string; // distância
-  menuItems: MenuItem[];
+  rating: number;
+  deliveryTime: string;
+  deliveryFee: number;
+  distance: string;
+  address: string,
+  phone: string
+  menuItems?: MenuItem[];
 }
