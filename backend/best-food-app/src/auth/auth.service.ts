@@ -28,7 +28,12 @@ export class AuthService {
     if (!await bcrypt.compare(password, user.password)){
         throw new UnauthorizedException('Email e/ou senha incorretos.')
     }
-    return this.createToken(user);
+
+    return {
+        acessToken: this.createToken(user),
+        name: user.name,
+        email: user.email
+    }
   }
 
   async register(data: CreateUserDTO) {
@@ -36,17 +41,15 @@ export class AuthService {
     // return this.createToken(user);
   }
 
-  createToken(user: User) {
-    return {
-        acessToken: this.JWTService.sign({
+    createToken(user: User) {
+        return this.JWTService.sign({
             id: user.id,
             name: user.name,
             email: user.email,
         }, {
-            expiresIn: "7 days",
+            expiresIn: "2 days",
         })
     }
-}
 
 checkToken(token: string) {
     try{

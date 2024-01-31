@@ -2,11 +2,11 @@ import { Controller, Get, Post, Body, Param, UseGuards } from '@nestjs/common';
 import { RestaurantService } from './restaurant.service';
 import { AuthGuard } from 'src/guards/auth.guard';
 
+@UseGuards(AuthGuard)
 @Controller('restaurants')
 export class RestaurantController {
   constructor(private readonly restaurantService: RestaurantService) {}
 
-  @UseGuards(AuthGuard)
   @Get()
   findAll() {
     return this.restaurantService.findAll();

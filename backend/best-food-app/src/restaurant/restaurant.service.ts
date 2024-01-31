@@ -22,21 +22,38 @@ export class RestaurantService {
   async search(term: string) {
     const restaurants = await this.prisma.restaurant.findMany({
       where: {
-        name: { 
-          contains: term
-        },
-      },
-    });
-  
-    const menuItems = await this.prisma.menuItem.findMany({
-      where: {
         OR: [
-          { name: { contains: term} },
-          { description: { contains: term} },
+          {
+            name: {
+              contains: term,
+            },
+          },
+          {
+            menu_items: {
+              some: {
+                OR: [
+                  {
+                    name: {
+                      contains: term,
+                    },
+                  },
+                  {
+                    description: {
+                      contains: term,                    
+                    },
+                  },
+                ],
+              },
+            },
+          },
         ],
       },
-    });
-    
-    return { restaurants, menuItems };
+      include: {
+        menu_items: true, // Inclui itens de menu nos resultados
+      },
+    }); 
+
+
+    return restaurants;
   }
 }
