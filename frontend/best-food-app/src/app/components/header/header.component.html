@@ -1,16 +1,16 @@
 <div class="header">
-  <div class="image-logo">
+  <div class="image-logo" (click)="navigateToHome()">
     <img src="assets/images/best-food-logo.png" alt="">
   </div>
 
-  <div class="search-container">
+  <div class="search-container" *ngIf="isHomeRoute()">
     <img src="../../../assets/images/icons/search.svg" alt="">
-    <input type="text" id="pesquisa" [(ngModel)]="pesquisa" (ngModelChange)="verificarPesquisa()">
+    <input type="text" [(ngModel)]="term" (ngModelChange)="verifyTerm()">
   </div>
 
 
   <div class="user-informations">
-    <p>Olá Fred! Seja bem vindo!</p>
+    <p>Olá {{userName}}! Seja bem vindo!</p>
     <div class="address">
       <b>Uberaba - MG</b>
       <img src="../../../assets/images/icons/location.svg" alt="">

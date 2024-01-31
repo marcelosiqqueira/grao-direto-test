@@ -28,7 +28,9 @@ export class LoginComponent {
   onSubmit() {
     this.userService.login(this.loginForm.value).subscribe( {
       next:(res: any) => {
-        localStorage.setItem('token',res.acessToken);
+        localStorage.setItem('token', res.acessToken);
+        localStorage.setItem('name', res.name);
+        localStorage.setItem('email', res.email);
         this.toastr.success('Login realizado com sucesso!', 'Senha Correta!');
         this.router.navigate(['home']);
       },

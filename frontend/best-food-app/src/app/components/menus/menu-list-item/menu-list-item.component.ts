@@ -26,10 +26,13 @@ export class MenuListItemComponent implements OnInit{
   ngOnInit() {
     const restaurantId = this.route.snapshot.paramMap.get('id');
     if (restaurantId) {
-        this.restaurantService.getRestaurantById(+restaurantId).subscribe(
-        data => this.restaurantInfo = data,
-        error => console.error('Erro ao carregar informações do restaurante', error)
-      );
+        this.restaurantService.getRestaurantById(+restaurantId).subscribe({
+          next : (data: Restaurant) => {
+            this.restaurantInfo = data
+          }, error : (err) => {
+            console.error('Erro ao carregar informações do restaurante', err)
+          }
+        });
     }
   }
 }

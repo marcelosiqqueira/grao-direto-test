@@ -1,20 +1,26 @@
 import { Restaurant } from './../../../shared/models/restaurant.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RestaurantService } from 'src/app/services/restaurant.service';
-import { SearchResult } from 'src/app/shared/models/search-result.model';
 
 @Component({
   selector: 'app-restaurant-list',
   templateUrl: './restaurant-list.component.html',
   styleUrls: ['./restaurant-list.component.css']
 })
-export class RestaurantListComponent implements OnInit {
+export class RestaurantListComponent implements OnInit, OnChanges {
   restaurants: Restaurant[] = [];
 
-  constructor(private restaurantService: RestaurantService) {}
+  constructor(
+    private restaurantService: RestaurantService
+  ) {}
 
-  @Input()
-  searchResult: any = { restaurants: [], pesquisa: '' };
+  @Input() searchResult!: Restaurant[];
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['searchResult']) {
+      this.restaurants = this.searchResult;
+    }
+  }
 
   ngOnInit() {
     this.restaurantService.getAll().subscribe(

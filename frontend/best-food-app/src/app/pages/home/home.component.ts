@@ -1,29 +1,14 @@
 import { Component } from '@angular/core';
-import { SearchResult } from 'src/app/shared/models/search-result.model';
-
+import { Restaurant } from 'src/app/shared/models/restaurant.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  searchResult!: Restaurant[];
 
-  view: number = 1;
-
-  searchResult!: any;
-
-  changeView(searchResult: any) {
-
-    if(searchResult.pesquisa.length > 3 ) {
-      this.view = 2;
-      this.searchResult = searchResult;
-      return;
-    }
-
-    if(searchResult.menuItems.length == 0 && searchResult.restaurants.length == 0) {
-      this.view = 1;
-      this.searchResult = searchResult;
-      return;
-    }
+  onSearchReceived(result: Restaurant[]): void {
+    this.searchResult = result;
   }
 }

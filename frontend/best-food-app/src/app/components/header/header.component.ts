@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestaurantService } from 'src/app/services/restaurant.service';
-import { SearchResult } from '../../shared/models/search-result.model';
+import { UserService } from 'src/app/services/user.service';
+import { Restaurant } from 'src/app/shared/models/restaurant.model';
 
 @Component({
   selector: 'app-header',
@@ -9,28 +11,43 @@ import { SearchResult } from '../../shared/models/search-result.model';
 })
 export class HeaderComponent {
 
-  constructor(private readonly restaurantService: RestaurantService) {}
+  constructor(
+    private readonly restaurantService: RestaurantService,
+    private readonly router: Router
+  ) {}
 
   @Output() onSearch = new EventEmitter<any>();
 
-  pesquisa: string = '';
+  term: string = '';
 
-  verificarPesquisa() {
+  userName: string | null = localStorage.getItem('name');
 
-    if(this.pesquisa.length < 4){
-      this.onSearch.emit({restaurants: [], menuItems: [], pesquisa:this.pesquisa});
+  isHomeRoute(): boolean {
+    return this.router.url === '/home';
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+
+  verifyTerm() {
+
+    if(this.term.length < 3){
+      this.restaurantService.getAll().subscribe({
+        next : (res: Restaurant[])  => {
+          this.onSearch.emit(res)
+        }, error : (err) => {
+        }
+      });
       return;
     }
 
-    this.restaurantService.getItemsByTerm(this.pesquisa).subscribe({
-      next : (res: SearchResult)  => {
-        let response:any = res;
-        response['pesquisa'] = this.pesquisa
-        this.onSearch.emit(response )
+    this.restaurantService.getItemsByTerm(this.term).subscribe({
+      next : (res: Restaurant[])  => {
+        this.onSearch.emit(res)
       }, error : (err) => {
       }
-    })
+    });
   }
-
 }
 

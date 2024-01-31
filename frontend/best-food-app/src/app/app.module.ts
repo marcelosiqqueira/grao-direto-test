@@ -16,8 +16,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { SearchComponent } from './pages/search/search.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +27,6 @@ import { SearchComponent } from './pages/search/search.component';
     MenuListItemComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent,
   ],
   imports: [
     BrowserModule,
