@@ -84,3 +84,9 @@ Links:
 [Frontend](https://github.com/marcelosiqqueira/grao-direto-test/tree/main/frontend/best-food-app)
 
 [Backend](https://github.com/marcelosiqqueira/grao-direto-test/tree/main/backend/best-food-app)
+
+
+
+ Aqui abaixo se encontra um link com as queries SQL necessárias para criação do banco e inserções necessárias. 
+
+[Banco de dados](https://drive.google.com/file/d/1Ck6mcnGbXX6loWIE0cQzla4u25uM_YIw/view)
